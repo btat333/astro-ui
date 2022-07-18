@@ -1,0 +1,61 @@
+[
+    {
+        "name":"GPS",
+        "telemetryData":[
+            {
+                "mnemonic": "Latitude",
+                "key": "gps.lat",
+                "value": "0",
+                "unit": "deg N"
+            },
+            {
+                "key": "gps.long",
+                "mnemonic": "Longitude",
+                "value": "0",
+                "unit": "deg W"
+            },
+            {
+                "key": "gps.alt",
+                "mnemonic": "Altitude",
+                "value": "0",
+                "unit": "m"
+            },
+            {
+                "key": "gps.satnum",
+                "mnemonic": "# of Satellites",
+                "value": "0",
+                "unit": ""
+            },
+            {
+                "key": "gps.hdop",
+                "mnemonic": "HDOP",
+                "value": "0",
+                "unit": ""
+            }
+        ]
+    },
+    {
+        "name":"Magnetometer",
+        "telemetryData":[
+            {
+                "key": "magnet.x",
+                "mnemonic": "X",
+                "value": "0",
+                "unit": ""
+            },
+            {
+                "key": "magnet.y",
+                "mnemonic": "Y",
+                "value": "0",
+                "unit": ""
+            },
+            {
+                "key": "magnet.z",
+                "mnemonic": "Z",
+                "value": "0",
+                "unit": ""
+            },
+        ]
+    }
+]
+

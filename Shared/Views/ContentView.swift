@@ -9,25 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: .zero) {
-                HStack {
-                    Text("Telemetry")
-                        .foregroundColor(.white)
-                        .font(.title)
-                        .padding()
-                    Spacer()
-                }.background(.black)
-                
-                UITableView()
-                
-                TelemGroupView(groupName: "GPS")
-                DataRowView(telemetry: TelemetryData(mnemonic: "Latitude", value: "3.14159", unit: "km"))
-                DataRowView(telemetry: TelemetryData(mnemonic: "Longitude", value: "3.1459", unit: "km"))
-                TelemGroupView(groupName: "Magnetometer")
+        NavigationView {
+            List {
+                ForEach (telemetrySet) { telemetryGroup in
+                    Section {
+                        ForEach(telemetryGroup.telemetryData) { telemetryPoint in
+                            TelemetryRowView(telemetry: telemetryPoint)
+                        }
+                    } header: {
+                        Text(telemetryGroup.name)
+                    }
+                }
             }
-
-            Spacer()
+            .navigationTitle("Telemetry")
         }
     }
 }

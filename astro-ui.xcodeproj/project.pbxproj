@@ -12,9 +12,8 @@
 		140417342884FC6E001E8C82 /* astro_uiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1404170C2884FC6D001E8C82 /* astro_uiApp.swift */; };
 		140417362884FC6E001E8C82 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1404170D2884FC6D001E8C82 /* ContentView.swift */; };
 		140417382884FC6E001E8C82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1404170E2884FC6E001E8C82 /* Assets.xcassets */; };
-		1404175128850592001E8C82 /* DataRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1404175028850592001E8C82 /* DataRowView.swift */; };
-		1404175328850627001E8C82 /* TelemetryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1404175228850627001E8C82 /* TelemetryData.swift */; };
-		1404175528850AF8001E8C82 /* TelemGroupTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1404175428850AF8001E8C82 /* TelemGroupTitleView.swift */; };
+		1404175128850592001E8C82 /* TelemetryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1404175028850592001E8C82 /* TelemetryRowView.swift */; };
+		1404175328850627001E8C82 /* TelemetryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1404175228850627001E8C82 /* TelemetryPoint.swift */; };
 		1404175728858535001E8C82 /* telemetry.json in Resources */ = {isa = PBXBuildFile; fileRef = 1404175628858535001E8C82 /* telemetry.json */; };
 		1404175928858876001E8C82 /* TelemetryGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1404175828858876001E8C82 /* TelemetryGroupView.swift */; };
 		1404175B288588EE001E8C82 /* TelemetryGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1404175A288588EE001E8C82 /* TelemetryGroup.swift */; };
@@ -42,9 +41,8 @@
 		140417262884FC6E001E8C82 /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
 		140417302884FC6E001E8C82 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		140417322884FC6E001E8C82 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
-		1404175028850592001E8C82 /* DataRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRowView.swift; sourceTree = "<group>"; };
-		1404175228850627001E8C82 /* TelemetryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelemetryData.swift; sourceTree = "<group>"; };
-		1404175428850AF8001E8C82 /* TelemGroupTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelemGroupTitleView.swift; sourceTree = "<group>"; };
+		1404175028850592001E8C82 /* TelemetryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelemetryRowView.swift; sourceTree = "<group>"; };
+		1404175228850627001E8C82 /* TelemetryPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelemetryPoint.swift; sourceTree = "<group>"; };
 		1404175628858535001E8C82 /* telemetry.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = telemetry.json; sourceTree = "<group>"; };
 		1404175828858876001E8C82 /* TelemetryGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelemetryGroupView.swift; sourceTree = "<group>"; };
 		1404175A288588EE001E8C82 /* TelemetryGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelemetryGroup.swift; sourceTree = "<group>"; };
@@ -130,7 +128,7 @@
 		140417482884FCEE001E8C82 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1404175228850627001E8C82 /* TelemetryData.swift */,
+				1404175228850627001E8C82 /* TelemetryPoint.swift */,
 				1404175A288588EE001E8C82 /* TelemetryGroup.swift */,
 				1404175C28858952001E8C82 /* ModelData.swift */,
 			);
@@ -141,8 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				1404170D2884FC6D001E8C82 /* ContentView.swift */,
-				1404175028850592001E8C82 /* DataRowView.swift */,
-				1404175428850AF8001E8C82 /* TelemGroupTitleView.swift */,
+				1404175028850592001E8C82 /* TelemetryRowView.swift */,
 				1404175828858876001E8C82 /* TelemetryGroupView.swift */,
 			);
 			path = Views;
@@ -257,12 +254,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1404175928858876001E8C82 /* TelemetryGroupView.swift in Sources */,
-				1404175128850592001E8C82 /* DataRowView.swift in Sources */,
-				1404175528850AF8001E8C82 /* TelemGroupTitleView.swift in Sources */,
+				1404175128850592001E8C82 /* TelemetryRowView.swift in Sources */,
 				140417362884FC6E001E8C82 /* ContentView.swift in Sources */,
 				140417342884FC6E001E8C82 /* astro_uiApp.swift in Sources */,
 				1404175D28858952001E8C82 /* ModelData.swift in Sources */,
-				1404175328850627001E8C82 /* TelemetryData.swift in Sources */,
+				1404175328850627001E8C82 /* TelemetryPoint.swift in Sources */,
 				1404175B288588EE001E8C82 /* TelemetryGroup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,30 +7,24 @@
 
 import SwiftUI
 
-struct DataRowView: View {
-    var telemetry: TelemetryData
+struct TelemetryRowView: View {
+    var telemetry: TelemetryPoint
     var body: some View {
         HStack {
             Text(telemetry.mnemonic)
-                .bold()
-                .textCase(.uppercase)
-                .padding()
                 
             Spacer()
             HStack {
                 Text(telemetry.value)
-                    .font(.body)
-                    .foregroundColor(.primary)
                 Text(telemetry.unit)
                     .italic()
-            }
-            .padding()
-        }.border(.tertiary)
+            }.foregroundColor(.secondary)
+        }
     }
 }
 
 struct DataRowView_Previews: PreviewProvider {
     static var previews: some View {
-        DataRowView(telemetry: TelemetryData(mnemonic: "gps.x", value: "5.134", unit: "km"))
+        TelemetryRowView(telemetry: telemetrySet[0].telemetryData[0])
     }
 }

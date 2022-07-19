@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct TelemetryGroup {
+struct TelemetryGroup: Decodable, Identifiable {
+    var id: Int
     var name: String
-    var telemetryData: [TelemetryData]
+    var telemetryData: [TelemetryPoint]
 }

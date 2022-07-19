@@ -1,32 +1,38 @@
 [
     {
+        "id":1001,
         "name":"GPS",
         "telemetryData":[
             {
+                "id":2001,
                 "mnemonic": "Latitude",
                 "key": "gps.lat",
                 "value": "0",
                 "unit": "deg N"
             },
             {
+                "id":2002,
                 "key": "gps.long",
                 "mnemonic": "Longitude",
                 "value": "0",
                 "unit": "deg W"
             },
             {
+                "id":2003,
                 "key": "gps.alt",
                 "mnemonic": "Altitude",
                 "value": "0",
                 "unit": "m"
             },
             {
+                "id":2004,
                 "key": "gps.satnum",
                 "mnemonic": "# of Satellites",
                 "value": "0",
                 "unit": ""
             },
             {
+                "id":2005,
                 "key": "gps.hdop",
                 "mnemonic": "HDOP",
                 "value": "0",
@@ -35,26 +41,30 @@
         ]
     },
     {
+        "id":1002,
         "name":"Magnetometer",
         "telemetryData":[
             {
+                "id":2006,
                 "key": "magnet.x",
                 "mnemonic": "X",
                 "value": "0",
                 "unit": ""
             },
             {
+                "id":2007,
                 "key": "magnet.y",
                 "mnemonic": "Y",
                 "value": "0",
                 "unit": ""
             },
             {
+                "id":2008,
                 "key": "magnet.z",
                 "mnemonic": "Z",
                 "value": "0",
                 "unit": ""
-            },
+            }
         ]
     }
 ]

@@ -18,6 +18,7 @@
 		1404175928858876001E8C82 /* TelemetryGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1404175828858876001E8C82 /* TelemetryGroupView.swift */; };
 		1404175B288588EE001E8C82 /* TelemetryGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1404175A288588EE001E8C82 /* TelemetryGroup.swift */; };
 		1404175D28858952001E8C82 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1404175C28858952001E8C82 /* ModelData.swift */; };
+		141AB756288BACE20012A8F9 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 141AB755288BACE20012A8F9 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,19 @@
 			remoteInfo = "astro-ui (iOS)";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		14DDE4BF288CF422005A23D3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1404170C2884FC6D001E8C82 /* astro_uiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = astro_uiApp.swift; sourceTree = "<group>"; };
@@ -47,6 +61,7 @@
 		1404175828858876001E8C82 /* TelemetryGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelemetryGroupView.swift; sourceTree = "<group>"; };
 		1404175A288588EE001E8C82 /* TelemetryGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelemetryGroup.swift; sourceTree = "<group>"; };
 		1404175C28858952001E8C82 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		141AB755288BACE20012A8F9 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,17 +85,20 @@
 		140417062884FC6D001E8C82 = {
 			isa = PBXGroup;
 			children = (
+				141AB755288BACE20012A8F9 /* Podfile */,
 				1404170B2884FC6D001E8C82 /* Shared */,
 				1404171A2884FC6E001E8C82 /* macOS */,
 				140417232884FC6E001E8C82 /* Tests iOS */,
 				1404172F2884FC6E001E8C82 /* Tests macOS */,
 				140417142884FC6E001E8C82 /* Products */,
+				14DDE4BC288CF422005A23D3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		1404170B2884FC6D001E8C82 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				14DDE3CE288BB6C0005A23D3 /* Client */,
 				1404174A2884FCFC001E8C82 /* Resources */,
 				140417492884FCF6001E8C82 /* Views */,
 				140417482884FCEE001E8C82 /* Models */,
@@ -153,6 +171,20 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		14DDE3CE288BB6C0005A23D3 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		14DDE4BC288CF422005A23D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -163,12 +195,15 @@
 				1404170F2884FC6E001E8C82 /* Sources */,
 				140417102884FC6E001E8C82 /* Frameworks */,
 				140417112884FC6E001E8C82 /* Resources */,
+				14DDE4BF288CF422005A23D3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "astro-ui (iOS)";
+			packageProductDependencies = (
+			);
 			productName = "astro-ui (iOS)";
 			productReference = 140417132884FC6E001E8C82 /* astro-ui.app */;
 			productType = "com.apple.product-type.application";
@@ -219,6 +254,8 @@
 				Base,
 			);
 			mainGroup = 140417062884FC6D001E8C82;
+			packageReferences = (
+			);
 			productRefGroup = 140417142884FC6E001E8C82 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				141AB756288BACE20012A8F9 /* Podfile in Resources */,
 				140417382884FC6E001E8C82 /* Assets.xcassets in Resources */,
 				1404175728858535001E8C82 /* telemetry.json in Resources */,
 			);
@@ -319,6 +357,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -335,7 +374,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -377,6 +416,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -387,6 +427,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
@@ -411,6 +452,16 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Shared/Package/ZMQ/Libraries",
+					"$(PROJECT_DIR)/Shared/Package/ZMQ/SwiftyZeroMQ-master/Libraries",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Shared/Package/ZMQ/Libraries",
+					"$(PROJECT_DIR)/Shared/Package/ZMQ/SwiftyZeroMQ-master/Libraries",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "obajo.astro-ui";
@@ -442,6 +493,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Shared/Package/ZMQ/Libraries",
+					"$(PROJECT_DIR)/Shared/Package/ZMQ/SwiftyZeroMQ-master/Libraries",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /Users/bentatman/Downloads;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "obajo.astro-ui";
 				PRODUCT_NAME = "astro-ui";

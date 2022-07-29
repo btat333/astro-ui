@@ -15,7 +15,6 @@
 		1404175128850592001E8C82 /* TelemetryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1404175028850592001E8C82 /* TelemetryRowView.swift */; };
 		1404175328850627001E8C82 /* TelemetryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1404175228850627001E8C82 /* TelemetryPoint.swift */; };
 		1404175728858535001E8C82 /* telemetry.json in Resources */ = {isa = PBXBuildFile; fileRef = 1404175628858535001E8C82 /* telemetry.json */; };
-		1404175928858876001E8C82 /* TelemetryGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1404175828858876001E8C82 /* TelemetryGroupView.swift */; };
 		1404175B288588EE001E8C82 /* TelemetryGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1404175A288588EE001E8C82 /* TelemetryGroup.swift */; };
 		1404175D28858952001E8C82 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1404175C28858952001E8C82 /* ModelData.swift */; };
 		141AB756288BACE20012A8F9 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 141AB755288BACE20012A8F9 /* Podfile */; };
@@ -58,7 +57,6 @@
 		1404175028850592001E8C82 /* TelemetryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelemetryRowView.swift; sourceTree = "<group>"; };
 		1404175228850627001E8C82 /* TelemetryPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelemetryPoint.swift; sourceTree = "<group>"; };
 		1404175628858535001E8C82 /* telemetry.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = telemetry.json; sourceTree = "<group>"; };
-		1404175828858876001E8C82 /* TelemetryGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelemetryGroupView.swift; sourceTree = "<group>"; };
 		1404175A288588EE001E8C82 /* TelemetryGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelemetryGroup.swift; sourceTree = "<group>"; };
 		1404175C28858952001E8C82 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		141AB755288BACE20012A8F9 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
@@ -158,7 +156,6 @@
 			children = (
 				1404170D2884FC6D001E8C82 /* ContentView.swift */,
 				1404175028850592001E8C82 /* TelemetryRowView.swift */,
-				1404175828858876001E8C82 /* TelemetryGroupView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -291,7 +288,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1404175928858876001E8C82 /* TelemetryGroupView.swift in Sources */,
 				1404175128850592001E8C82 /* TelemetryRowView.swift in Sources */,
 				140417362884FC6E001E8C82 /* ContentView.swift in Sources */,
 				140417342884FC6E001E8C82 /* astro_uiApp.swift in Sources */,

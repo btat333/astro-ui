@@ -17,63 +17,15 @@ extension Data {
     }
 }
 
-func readMessage(task: URLSessionWebSocketTask) {
-    
-    print("Finding messages")
-    task.receive{ result in
-        
-        switch result {
-        case .failure(let error):
-            print(error)
-        case .success(let message):
-            switch message {
-            case .data(let data):
-                print(data)
-            case .string(let string):
-                print(string)
-                
-            @unknown default:
-                print("Recieved unknown data type from web socket.")
-            }
-            
-            readMessage(task: task)
-        }
-    }
-}
 
 @main
 struct astro_uiApp: App {
-    
-    @Environment(\.scenePhase) var scenePhase
-    private let endpoint: URL = URL(string: "ws://192.168.86.250:5559")!
-    private var task: URLSessionWebSocketTask
-
-    init() {
-        task = URLSession.shared.webSocketTask(with: endpoint)
-    }
+    @StateObject private var modelData = ModelData()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-        }
-        .onChange(of: scenePhase) { newScenePhase in
-            switch newScenePhase {
-            case .active:
-                print("Initializing telemetry client.")
-                task.resume()
-                readMessage(task: task)
-                print("Initialized")
-
-            case .inactive:
-                print("Pausing client.")
-                task.suspend()
-                
-            case .background:
-                print("App is in background")
-                
-            @unknown default:
-                print("Oh - interesting: I received an unexpected new value.")
-            }
+                .environmentObject(modelData)
         }
     }
 }

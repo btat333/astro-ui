@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TelemetryRowView: View {
+    @EnvironmentObject var modelData: ModelData
     var telemetry: TelemetryPoint
     var body: some View {
         HStack {
@@ -24,7 +25,9 @@ struct TelemetryRowView: View {
 }
 
 struct DataRowView_Previews: PreviewProvider {
+    static let modelData = ModelData()
+    
     static var previews: some View {
-        TelemetryRowView(telemetry: telemetrySet[0].telemetryData[0])
+        TelemetryRowView(telemetry: modelData.telemetrySet[0].telemetryData[0])
     }
 }

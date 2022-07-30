@@ -4,6 +4,7 @@ import Combine
 
 
 final class ModelData: ObservableObject {
+    
     @Published var serverAlive: Bool = false
     @Published var telemetrySet: [TelemetryGroup] = load("telemetry.json")
     private let endpoint: URL = URL(string: "ws://192.168.86.250:5559")!

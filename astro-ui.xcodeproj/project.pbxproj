@@ -18,6 +18,9 @@
 		1404175B288588EE001E8C82 /* TelemetryGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1404175A288588EE001E8C82 /* TelemetryGroup.swift */; };
 		1404175D28858952001E8C82 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1404175C28858952001E8C82 /* ModelData.swift */; };
 		141AB756288BACE20012A8F9 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 141AB755288BACE20012A8F9 /* Podfile */; };
+		14D90E7B2893A0AE00380772 /* CommandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D90E7A2893A0AE00380772 /* CommandView.swift */; };
+		14D90E7D289414E400380772 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D90E7C289414E400380772 /* MainView.swift */; };
+		14D90E802894E09300380772 /* CommandClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D90E7F2894E09300380772 /* CommandClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,9 @@
 		1404175A288588EE001E8C82 /* TelemetryGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelemetryGroup.swift; sourceTree = "<group>"; };
 		1404175C28858952001E8C82 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		141AB755288BACE20012A8F9 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		14D90E7A2893A0AE00380772 /* CommandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandView.swift; sourceTree = "<group>"; };
+		14D90E7C289414E400380772 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		14D90E7F2894E09300380772 /* CommandClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +162,8 @@
 			children = (
 				1404170D2884FC6D001E8C82 /* ContentView.swift */,
 				1404175028850592001E8C82 /* TelemetryRowView.swift */,
+				14D90E7A2893A0AE00380772 /* CommandView.swift */,
+				14D90E7C289414E400380772 /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -171,6 +179,7 @@
 		14DDE3CE288BB6C0005A23D3 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				14D90E7F2894E09300380772 /* CommandClient.swift */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -289,8 +298,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1404175128850592001E8C82 /* TelemetryRowView.swift in Sources */,
+				14D90E7D289414E400380772 /* MainView.swift in Sources */,
 				140417362884FC6E001E8C82 /* ContentView.swift in Sources */,
 				140417342884FC6E001E8C82 /* astro_uiApp.swift in Sources */,
+				14D90E7B2893A0AE00380772 /* CommandView.swift in Sources */,
+				14D90E802894E09300380772 /* CommandClient.swift in Sources */,
 				1404175D28858952001E8C82 /* ModelData.swift in Sources */,
 				1404175328850627001E8C82 /* TelemetryPoint.swift in Sources */,
 				1404175B288588EE001E8C82 /* TelemetryGroup.swift in Sources */,
